@@ -18,8 +18,7 @@ function initNavbar() {
 }
 
 function reset() {
-  content.innerHTML = "";
-  initNavbar();
+  content.removeChild(content.lastChild);
 }
 
 function showHome() {

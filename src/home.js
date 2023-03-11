@@ -1,4 +1,6 @@
 const Home = () => {
+  const home = document.createElement("div");
+  home.setAttribute("id", "home");
   const headline = document.createElement("h1");
   headline.textContent = "The Healthy Restaurant";
 
@@ -12,7 +14,8 @@ const Home = () => {
 
   const content = document.getElementById("content");
 
-  content.append(headline, copy, imageDemo);
+  home.append(headline, copy, imageDemo);
+  content.appendChild(home);
 };
 
 export default Home;
