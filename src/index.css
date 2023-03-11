@@ -39,9 +39,11 @@ header button {
   cursor: pointer;
 }
 
-header button:hover {
-  background-color: var(--accent-color);
+header button:focus {
+  background-color: #ffd900;
   transform: scale(1.05);
+  font-size: 2rem;
+  color: black;
 }
 
 #content {
@@ -116,4 +118,11 @@ img {
   width: 250px;
   height: 200px;
   padding: 20px;
+}
+
+#copy {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: red;
 }
