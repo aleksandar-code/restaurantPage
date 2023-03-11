@@ -5,7 +5,28 @@ import Menu from "./menu";
 import "./index.css";
 
 const content = document.getElementById("content");
-let showTab;
+
+function reset() {
+  content.removeChild(content.lastChild);
+}
+function showTab(tab) {
+  switch (tab) {
+    case "Home":
+      reset();
+      Home();
+      break;
+    case "Menu":
+      reset();
+      Menu();
+      break;
+    case "Contact":
+      reset();
+      Contact();
+      break;
+    default:
+      console.log("no switch");
+  }
+}
 function initNavbar() {
   Navbar();
   const buttons = document.querySelectorAll("button");
@@ -16,41 +37,6 @@ function initNavbar() {
     });
   });
 }
-
-function reset() {
-  content.removeChild(content.lastChild);
-}
-
-function showHome() {
-  reset();
-  Home();
-}
-
-function showMenu() {
-  reset();
-  Menu();
-}
-
-function showContact() {
-  reset();
-  Contact();
-}
-
-showTab = (tab) => {
-  switch (tab) {
-    case "Home":
-      showHome();
-      break;
-    case "Menu":
-      showMenu();
-      break;
-    case "Contact":
-      showContact();
-      break;
-    default:
-      console.log("no switch");
-  }
-};
 
 function initPage() {
   initNavbar();
