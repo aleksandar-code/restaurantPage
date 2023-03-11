@@ -7,6 +7,7 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  background-color: #efeff2;
 }
 
 h1 {
@@ -21,14 +22,13 @@ header {
   height: 100px;
   width: 100%;
   background-color: #ffd900;
-  top: 0;
-  position: absolute;
+
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 header button {
-  width: 120px;
+  width: 100px;
   height: 30px;
   border: none;
   background-color: var(--accent-color);
@@ -50,8 +50,6 @@ header button:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: #efeff2;
-  height: 100vh;
 }
 
 #home {
@@ -68,10 +66,26 @@ header button:hover {
 
 #menu {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 350px;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 #contact {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 350px;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .card {
@@ -81,6 +95,25 @@ header button:hover {
   border-radius: 10px;
 }
 
+.food-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.food-card img {
+  padding: 0;
+}
+
+.food-card {
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+}
 img {
   width: 250px;
+  height: 200px;
+  padding: 20px;
 }
