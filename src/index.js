@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 import Home from "./home";
-import Contact from "./contact";
+import About from "./about";
 import Menu from "./menu";
 import "./index.css";
 
@@ -19,9 +19,9 @@ function showTab(tab) {
       reset();
       Menu();
       break;
-    case "Contact":
+    case "About":
       reset();
-      Contact();
+      About();
       break;
     default:
       console.log("no switch");

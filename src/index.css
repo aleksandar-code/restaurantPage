@@ -78,7 +78,7 @@ header button:focus {
   padding: 20px;
 }
 
-#contact {
+#about {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,4 +125,8 @@ img {
   font-style: italic;
   font-weight: bold;
   color: red;
+}
+
+#about .card {
+  width: 220px;
 }

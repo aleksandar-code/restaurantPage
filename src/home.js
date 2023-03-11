@@ -9,7 +9,8 @@ const Home = () => {
   const copy = document.createElement("div");
   copy.setAttribute("id", "copy");
   copy.classList.add("card");
-  copy.innerText = "Your health is our priority!";
+  copy.innerText =
+    "Your health is our priority! Get Home-Cooked Food Delivered Right At Your Doorstep";
   const imageDemo = document.createElement("img");
   imageDemo.src = myImage;
   const imageHolder = document.createElement("div");

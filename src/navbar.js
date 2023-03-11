@@ -4,14 +4,14 @@ const Navbar = () => {
   const menuBtn = document.createElement("button");
   menuBtn.setAttribute("id", "menu-button");
   menuBtn.textContent = "Menu";
-  const contactBtn = document.createElement("button");
-  contactBtn.setAttribute("id", "contact-button");
-  contactBtn.textContent = "Contact";
+  const aboutBtn = document.createElement("button");
+  aboutBtn.setAttribute("id", "about-button");
+  aboutBtn.textContent = "About";
   const homeBtn = document.createElement("button");
   homeBtn.setAttribute("id", "order-button");
   homeBtn.textContent = "Home";
 
-  header.append(homeBtn, menuBtn, contactBtn);
+  header.append(homeBtn, menuBtn, aboutBtn);
   content.appendChild(header);
 };
 export default Navbar;
