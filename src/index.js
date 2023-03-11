@@ -1,26 +1,43 @@
-import navbar from "./navbar";
-import home from "./home";
-import contact from "./contact";
+import Navbar from "./navbar";
+import Home from "./home";
+import Contact from "./contact";
+import Menu from "./menu";
 import "./index.css";
 
 const content = document.getElementById("content");
+let showTab;
+function initNavbar() {
+  Navbar();
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showTab(button.textContent);
+    });
+  });
+}
+
+function reset() {
+  content.innerHTML = "";
+  initNavbar();
+}
 
 function showHome() {
-  const element = home;
-  content.appendChild(element);
+  reset();
+  Home();
 }
 
 function showMenu() {
-  const element = navbar;
-  content.appendChild(element);
+  reset();
+  Menu();
 }
 
 function showContact() {
-  const element = contact;
-  content.appendChild(element);
+  reset();
+  Contact();
 }
 
-function showTab(tab) {
+showTab = (tab) => {
   switch (tab) {
     case "Home":
       showHome();
@@ -34,13 +51,11 @@ function showTab(tab) {
     default:
       console.log("no switch");
   }
+};
+
+function initPage() {
+  initNavbar();
+  Home();
 }
 
-const buttons = document.querySelectorAll("button");
-console.log(buttons);
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    showTab(button.textContent);
-  });
-});
+initPage();
