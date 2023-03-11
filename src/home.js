@@ -1,14 +1,4 @@
-const content = document.getElementById("content");
-const header = document.createElement("header");
-const menuBtn = document.createElement("button");
-menuBtn.setAttribute("id", "menu-button");
-menuBtn.textContent = "Menu";
-const contactBtn = document.createElement("button");
-contactBtn.setAttribute("id", "contact-button");
-contactBtn.textContent = "Contact";
-const homeBtn = document.createElement("button");
-homeBtn.setAttribute("id", "order-button");
-homeBtn.textContent = "Home";
+import "./navbar";
 
 const headline = document.createElement("h1");
 headline.textContent = "The Healthy Restaurant";
@@ -20,5 +10,7 @@ copy.textContent =
 const imageDemo = document.createElement("img");
 imageDemo.src =
   "https://cdn.pixabay.com/photo/2014/04/22/02/56/pizza-329523__340.jpg";
-header.append(homeBtn, menuBtn, contactBtn);
-content.append(header, headline, copy, imageDemo);
+
+const content = document.getElementById("content");
+
+content.append(headline, copy, imageDemo);
