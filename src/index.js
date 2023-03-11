@@ -1,35 +1,40 @@
 import navbar from "./navbar";
 import home from "./home";
+import contact from "./contact";
 import "./index.css";
+
+const content = document.getElementById("content");
+
+function showHome() {
+  const element = home;
+  content.appendChild(element);
+}
+
+function showMenu() {
+  const element = navbar;
+  content.appendChild(element);
+}
+
+function showContact() {
+  const element = contact;
+  content.appendChild(element);
+}
 
 function showTab(tab) {
   switch (tab) {
     case "Home":
-      console.log("switch home");
+      showHome();
       break;
     case "Menu":
-      console.log("switch menu");
+      showMenu();
       break;
     case "Contact":
-      console.log("switch contact");
+      showContact();
       break;
     default:
       console.log("no switch");
   }
 }
-
-function showHome() {
-  const element = home;
-
-  return element;
-}
-
-function showMenu() {
-  const element = navbar;
-  return element;
-}
-
-const content = document.getElementById("content");
 
 const buttons = document.querySelectorAll("button");
 console.log(buttons);
