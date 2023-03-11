@@ -1,7 +1,16 @@
+:root {
+  --primary-color: #ffd900;
+  --secondary-color: #99a700;
+  --accent-color: #00c181;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
-  background-color: rgb(130, 161, 117);
+}
+
+h1 {
+  color: black;
 }
 
 header {
@@ -10,16 +19,29 @@ header {
   align-items: center;
   gap: 20px;
   height: 100px;
+  width: 100%;
+  background-color: #ffd900;
+  top: 0;
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 header button {
   width: 120px;
   height: 30px;
-  border: 2px solid black;
-  background-color: lightblue;
-  color: rgb(255, 0, 212);
+  border: none;
+  background-color: var(--accent-color);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 #content {
@@ -28,6 +50,8 @@ header button {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-color: #efeff2;
+  height: 100vh;
 }
 
 #home {
@@ -36,29 +60,27 @@ header button {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 500px;
-  height: auto;
-  background-color: rgb(178, 224, 159);
+  width: 350px;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 #menu {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 500px;
 }
 
 #contact {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 500px;
+}
+
+.card {
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: black;
+  border-radius: 10px;
 }
 
 img {
-  width: 400px;
+  width: 250px;
 }

@@ -8,10 +8,13 @@ const Home = () => {
 
   const copy = document.createElement("div");
   copy.setAttribute("id", "copy");
+  copy.classList.add("card");
   copy.innerText =
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, magni? A exercitationem sint nihil asperiores molestiae aut. Consequatur autem porro eos quam mollitia dolor beatae, ab repellat excepturi dolorum id!";
   const imageDemo = document.createElement("img");
   imageDemo.src = myImage;
+  const imageHolder = document.createElement("div");
+  imageHolder.appendChild(imageDemo);
 
   const workTime = document.createElement("div");
   workTime.innerHTML = `
@@ -28,9 +31,11 @@ const Home = () => {
   Friday: 6am - 10pm
   <br>
   Saturday: 8am - 10pm`;
+
+  workTime.classList.add("card");
   const content = document.getElementById("content");
 
-  home.append(headline, copy, imageDemo, workTime);
+  home.append(headline, copy, imageHolder, workTime);
   content.appendChild(home);
 };
 
