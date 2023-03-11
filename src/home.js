@@ -1,3 +1,5 @@
+import myImage from "./pizza.jpg";
+
 const Home = () => {
   const home = document.createElement("div");
   home.setAttribute("id", "home");
@@ -6,15 +8,29 @@ const Home = () => {
 
   const copy = document.createElement("div");
   copy.setAttribute("id", "copy");
-  copy.textContent =
-    "An atypical setting, in the style of the origins and even if it was alittle difficult to be served, the place is a bit forgiving, moreover, open H24.";
+  copy.innerText =
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, magni? A exercitationem sint nihil asperiores molestiae aut. Consequatur autem porro eos quam mollitia dolor beatae, ab repellat excepturi dolorum id!";
   const imageDemo = document.createElement("img");
-  imageDemo.src =
-    "https://cdn.pixabay.com/photo/2014/04/22/02/56/pizza-329523__340.jpg";
+  imageDemo.src = myImage;
 
+  const workTime = document.createElement("div");
+  workTime.innerHTML = `
+  Sunday: 8am - 8pm
+  <br>
+  Monday: 6am - 6pm
+  <br>
+  Tuesday: 6am - 6pm
+  <br>
+  Wednesday: 6am - 6pm
+  <br>
+  Thursday: 6am - 10pm
+  <br>
+  Friday: 6am - 10pm
+  <br>
+  Saturday: 8am - 10pm`;
   const content = document.getElementById("content");
 
-  home.append(headline, copy, imageDemo);
+  home.append(headline, copy, imageDemo, workTime);
   content.appendChild(home);
 };
 
