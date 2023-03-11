@@ -1,1 +1,1 @@
-console.log("hello webpack");
+import "./page-load";
