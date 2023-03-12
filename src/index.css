@@ -12,6 +12,7 @@ body {
 
 h1 {
   color: black;
+  font-size: 2rem;
 }
 
 header {
@@ -129,4 +130,12 @@ img {
 
 #about .card {
   width: 220px;
+}
+
+#about .card div {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  position: relative;
 }
